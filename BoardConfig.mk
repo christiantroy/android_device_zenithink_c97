@@ -54,7 +54,8 @@ WIFI_DRIVER_FW_PATH_STA     := ""
 WIFI_DRIVER_FW_PATH_AP      := ""
 WIFI_DRIVER_FW_PATH_P2P     := ""
 WIFI_DRIVER_MODULE_NAME     := "wlan"
-WIFI_DRIVER_MODULE_ARG      := ""
+WIFI_DRIVER_MODULE_ARG      := "rtw_power_mgnt=2"
+TARGET_CUSTOM_WIFI := ../../device/zenithink/c97/wifi_realtek.c
 
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
