@@ -1,6 +1,10 @@
 #!/system/bin/sh
 #
 
+# ext4
+insmod /system/lib/modules/jbd2.ko
+insmod /system/lib/modules/ext4.ko
+
 # bluetooth
 insmod /system/lib/modules/rfkill.ko
 insmod /system/lib/modules/bluetooth.ko

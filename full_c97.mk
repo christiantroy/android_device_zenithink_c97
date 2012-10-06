@@ -33,7 +33,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.d/01cpu:system/etc/init.d/01cpu \
     $(LOCAL_PATH)/init.d/02modules:system/etc/init.d/02modules \
     $(LOCAL_PATH)/init.d/03kernel:system/etc/init.d/03kernel \
-    $(LOCAL_PATH)/init.d/05wifi:system/etc/init.d/05wifi \
+    $(LOCAL_PATH)/init.d/06fixpermissions:system/etc/init.d/06fixpermissions \
     $(LOCAL_PATH)/init.d/10devlistener:system/etc/init.d/10devlistener
 
 # Prebuilt configs
@@ -53,7 +53,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     $(LOCAL_PATH)/configs/hostapd.conf:system/etc/wifi/hostapd.conf \
     $(LOCAL_PATH)/configs/Vendor_0001_Product_0001_Version_0100.idc:system/usr/idc/Vendor_0001_Product_0001_Version_0100.idc \
-    $(LOCAL_PATH)/configs/Vendor_0001_Product_0002_Version_0100.idc:system/usr/idc/Vendor_0001_Product_0002_Version_0100.idc
+    $(LOCAL_PATH)/configs/Vendor_0001_Product_0002_Version_0100.idc:system/usr/idc/Vendor_0001_Product_0002_Version_0100.idc \
+    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
 
 # USB ModeSwitch
 PRODUCT_COPY_FILES += \
@@ -84,27 +86,26 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/vold/ntfs-3g:system/bin/ntfs-3g \
     $(LOCAL_PATH)/proprietary/vold/ntfs-3g.probe:system/bin/ntfs-3g.probe \
     $(LOCAL_PATH)/proprietary/vold/mkntfs:system/bin/mkntfs \
-    $(LOCAL_PATH)/proprietary/fbset:system/xbin/fbset \
-    $(LOCAL_PATH)/prebuilt/Camera.apk:system/app/Camera.apk
+    $(LOCAL_PATH)/proprietary/fbset:system/xbin/fbset
 
 PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
-    frameworks/base/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
-    frameworks/base/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
-    frameworks/base/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
-    frameworks/base/data/etc/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
-    frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
-    frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
-    frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/base/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
-    frameworks/base/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
-    frameworks/base/data/etc/android.hardware.sensor.compass.xml:system/etc/permissionsandroid.hardware.sensor.compass.xml \
-    frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
-    frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
-    frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/base/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
+    frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
+    frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
+    frameworks/native/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
+    frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
+    frameworks/native/data/etc/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
+    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
+    frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
+    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
+    frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
+    frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissionsandroid.hardware.sensor.compass.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
+    frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
+    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
 DEVICE_PACKAGE_OVERLAYS := device/zenithink/c97/overlay
@@ -113,7 +114,8 @@ DEVICE_PACKAGE_OVERLAYS := device/zenithink/c97/overlay
 PRODUCT_PACKAGES += \
     camera.amlogic.so \
     lights.amlogic \
-    hwcomposer.amlogic
+    hwcomposer.amlogic \
+    power.amlogic
 
 # Mali GPU OpenGL libraries
 PRODUCT_PACKAGES += \
@@ -131,6 +133,9 @@ PRODUCT_PACKAGES += \
     init-pppd.sh \
     ip-up \
     chat
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/libril/rild:system/bin/rild
 
 # ALSA
 PRODUCT_PACKAGES += \
@@ -200,8 +205,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     windowsmgr.max_events_per_sec=240 \
     view.touch_slop=2 \
     view.minimum_fling_velocity=25 \
-    ro.additionalmounts=/mnt/external_sdcard \
-    ro.vold.switchablepair=/mnt/sdcard,/mnt/external_sdcard \
+    ro.additionalmounts=/storage/sdcard1 \
+    ro.vold.switchablepair=/storage/sdcard0,/storage/sdcard1 \
     persist.sys.vold.switchexternal=0
    
 PRODUCT_AAPT_CONFIG := large mdpi
@@ -215,6 +220,6 @@ TARGET_BOOTANIMATION_NAME := horizontal-1024x768
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
-$(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
 $(call inherit-product, build/target/product/full_base.mk)
 $(call inherit-product-if-exists, vendor/zenithink/c97/c97-vendor.mk)
