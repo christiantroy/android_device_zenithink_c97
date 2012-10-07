@@ -46,3 +46,9 @@ ro.sys.min_cpu_on=408000
 ro.sys.min_cpu_off=96000
 ro.sys.max_cpu_on=1200000
 ro.sys.max_cpu_off=1008000
+# hardware info
+ro.device.cpu=1.5GHz dual-core Amlogic AML8726M-MX
+ro.device.gpu=ARM Mali 400
+ro.device.rear_cam=2.0 MP
+ro.device.front_cam=2.0 MP
+ro.device.screen_res=768x1024
