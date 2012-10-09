@@ -209,7 +209,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vold.switchablepair=/storage/sdcard0,/storage/sdcard1 \
     persist.sys.vold.switchexternal=0
    
-PRODUCT_AAPT_CONFIG := large mdpi
+PRODUCT_AAPT_CONFIG := xlarge mdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 PRODUCT_CHARACTERISTICS := tablet
