@@ -206,7 +206,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     view.touch_slop=2 \
     view.minimum_fling_velocity=25
    
-PRODUCT_AAPT_CONFIG := large mdpi
+PRODUCT_AAPT_CONFIG := xlarge mdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 PRODUCT_CHARACTERISTICS := tablet
