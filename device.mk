@@ -195,7 +195,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.execution-mode=int:jit \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.verify-bytecode=false \
-    dalvik.vm.dexopt-flags=v=n,o=v
+    dalvik.vm.dexopt-flags=v=n,o=v \
+    dalvik.vm.dexopt-data-only=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.timezone=Europe/Rome \
