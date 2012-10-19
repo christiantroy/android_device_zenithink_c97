@@ -239,7 +239,7 @@ int is_wifi_driver_loaded() {
 #endif
 }
 
-#define TIME_COUNT 20 // 200ms*20 = 4 seconds for completion
+#define TIME_COUNT 50 // 200ms*50 = 10 seconds for completion
 int wifi_load_driver()
 {
     char driver_status[PROPERTY_VALUE_MAX];
