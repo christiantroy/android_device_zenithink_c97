@@ -57,7 +57,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/Vendor_0001_Product_0001_Version_0100.idc:system/usr/idc/Vendor_0001_Product_0001_Version_0100.idc \
     $(LOCAL_PATH)/configs/Vendor_0001_Product_0002_Version_0100.idc:system/usr/idc/Vendor_0001_Product_0002_Version_0100.idc \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
+    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/prebuilt/ToggleBar.apk:system/app/ToggleBar.apk
 
 # USB ModeSwitch
 PRODUCT_COPY_FILES += \
