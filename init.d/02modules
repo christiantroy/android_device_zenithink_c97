@@ -21,6 +21,7 @@ echo veno > /proc/sys/net/ipv4/tcp_congestion_control
 # usb serial
 insmod /system/lib/modules/cp210x.ko
 insmod /system/lib/modules/pl2303.ko
+insmod /system/lib/modules/ftdi_sio.ko
 
 # gamepads
 insmod /system/lib/modules/xpad.ko
