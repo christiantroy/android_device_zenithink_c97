@@ -41,7 +41,7 @@ ro.has.cpu.setting=false
 ro.cpumode.maxfreq=1200000,1200000,800000
 ro.usbstorage.cpumode=performance
 ro.usbstorage.maxfreq=600000
-ro.vout.dualdisplay2=true
+ro.vout.dualdisplay3=true
 persist.sys.usb.config=mass_storage,adb
 ro.disable_permanent_hidebar=0
 # power hal
