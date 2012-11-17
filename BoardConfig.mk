@@ -73,13 +73,13 @@ TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 TARGET_BOARD_PLATFORM := meson6
 TARGET_BOOTLOADER_BOARD_NAME := g06ref
 TARGET_NO_BOOTLOADER := true
-TARGET_NO_KERNEL := true
+#TARGET_NO_KERNEL := true
+TARGET_PREBUILT_KERNEL := device/zenithink/c97/kernel
+BOARD_KERNEL_BASE := 0x40000000
+BOARD_KERNEL_CMDLINE := console=ttyS0,115200 rw init=/init loglevel=8
 TARGET_NO_RADIOIMAGE := true
 TARGET_SIMULATOR := false
 TARGET_PROVIDES_INIT_RC := true
-TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 536870912
-BOARD_FLASH_BLOCK_SIZE := 4096
 
 BOARD_EGL_CFG := device/zenithink/c97/egl.cfg
 USE_OPENGL_RENDERER := true
@@ -91,3 +91,5 @@ TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 
 COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB
+
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/zenithink/c97/releasetools/amlogic_ota_from_target_files
